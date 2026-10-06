@@ -8,6 +8,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "../../lib/utils";
+import logo from "../../Asserts/logo.png";
 
 export const Navbar = ({ children, className }) => {
   const ref = useRef(null);
@@ -179,9 +180,7 @@ export const NavbarLogo = () => {
       className="relative z-20 flex items-center gap-3 text-primary"
       aria-label="Flarans Beauty Parlour home"
     >
-      <div className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/50 bg-rose-100 text-rose-600 shadow-sm">
-        <span className="great-vibes-regular text-2xl leading-none">F</span>
-      </div>
+      <img src={logo} alt="" className="h-10 w-10 object-contain" />
       <span className="great-vibes-regular text-3xl leading-none text-rose-600">Flarans</span>
     </Link>
   );

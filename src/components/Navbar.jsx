@@ -20,6 +20,7 @@ export default function NavbarDemo() {
     { name: "Services", link: "/services" },
     { name: "About", link: "/about" },
     { name: "Gallery", link: "/gallery" },
+    { name: "Blogs", link: "/blogs" },
     { name: "Contact", link: "/contact" },
   ];
 

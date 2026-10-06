@@ -12,7 +12,7 @@ export default function Testimonials() {
       name: "Placeholder Customer",
       designation: "Bridal Client",
       quote: "A placeholder review for the website launch. Add verified client feedback here later.",
-      src: "https://images.unsplash.com/photo-1516975080661-460d3fc3c03a?q=80&w=3540&auto=format&fit=crop", 
+      src: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=3539&auto=format&fit=crop", 
     },
     {
       name: "Placeholder Customer",

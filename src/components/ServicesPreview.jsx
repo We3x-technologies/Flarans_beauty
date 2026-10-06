@@ -2,40 +2,27 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CometCard } from "./ui/Coment-card";
 import { motion } from "motion/react";
-
+import mens from "../Asserts/men.jpg";
+import women from "../Asserts/female.jpg";
+import kids from "../Asserts/kids.jpg";
 export default function ServicesPreview() {
   const creativeServices = [
     {
-      title: "Bridal Artistry",
-      serviceName: "Bridal Makeup",
-      desc: "Flawless transformations for your unforgettable day.",
-      category: "Makeup",
-      image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=600&q=80",
-      link: "/services?category=Bridal",
+      title: "Men",
+      desc: "Discover our premium grooming services for men, offering precision haircuts, shaves, and revitalizing treatments.",
+      image: mens,
+      link: "/services/men",
+    },{
+      title: "Women",
+      desc: "Experience the art of beauty with our curated services for women, from hair care to indulgent facials.",
+      image: women,
+      link: "/services/women",
     },
     {
-      title: "Hair Design",
-      serviceName: "Hair Spa (Small / Medium / Long)",
-      desc: "Precision cuts, vibrant colors, and expert styling.",
-      category: "Hair Care",
-      image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80",
-      link: "/services?category=Hair%20Care",
-    },
-    {
-      title: "Skin Radiance",
-      serviceName: "Skin Brightening",
-      desc: "Advanced facials tailored for glowing, healthy skin.",
-      category: "Facials",
-      image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=600&q=80",
-      link: "/services?category=Facials",
-    },
-    {
-      title: "Nail Spa",
-      serviceName: "Pedicure Spa",
-      desc: "Luxurious manicures and lasting, elegant nail art.",
-      category: "Pedicure & Manicure",
-      image: "https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?auto=format&fit=crop&w=600&q=80",
-      link: "/services?category=Pedicure%20%26%20Manicure",
+      title: "Kids",
+      desc: "Specialized care for your little ones, ensuring a fun and safe experience.",
+      image: kids,
+      link: "/services/kids",
     },
   ];
 
@@ -67,7 +54,7 @@ export default function ServicesPreview() {
             transition={{ delay: 0.1 }}
             className="mt-6 font-display text-4xl leading-tight text-[#351132] sm:text-5xl lg:text-6xl"
           >
-            Artistry in Every Detail
+          Services Provided for Every Individual
           </motion.h2>
           
           <motion.p 
@@ -82,7 +69,7 @@ export default function ServicesPreview() {
         </div>
 
         {/* Comet Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-6 justify-items-center">
           {creativeServices.map((service, idx) => (
             <motion.div
               key={service.title}
@@ -123,7 +110,7 @@ export default function ServicesPreview() {
                   {/* Explicit Button Link placed below the content */}
                   <div className="mt-6 mb-2 flex justify-center">
                     <Link
-                      to={`/contact?category=${encodeURIComponent(service.category)}&service=${encodeURIComponent(service.serviceName)}`}
+                      to={service.link}
                       className="group flex items-center gap-2 rounded-full border border-[#D4AF37]/50 bg-transparent px-5 py-2 text-[10px] font-bold uppercase tracking-[0.15em] text-[#D4AF37] transition-all hover:bg-[#D4AF37] hover:text-[#351132]"
                       aria-label={`Explore ${service.title}`}
                     >
@@ -137,27 +124,6 @@ export default function ServicesPreview() {
             </motion.div>
           ))}
         </div>
-
-        {/* View Complete Menu Button */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-          className="mt-20 flex justify-center"
-        >
-          <Link
-            to="/services"
-            className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[#791B70] px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] text-white shadow-lg transition-all hover:bg-[#351132] hover:shadow-[#791B70]/30 hover:-translate-y-1"
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              View Complete Menu
-              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-            </span>
-            <div className="absolute inset-0 z-0 h-full w-full translate-y-full bg-gradient-to-t from-white/20 to-transparent transition-transform duration-500 group-hover:translate-y-0" />
-          </Link>
-        </motion.div>
-
       </div>
     </section>
   );

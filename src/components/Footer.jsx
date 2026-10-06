@@ -1,4 +1,4 @@
-import { Camera, Mail, MapPin, MessageCircle, Phone, Users } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { FloatingDock } from '../components/ui/floating-dock';
 
@@ -6,28 +6,28 @@ export default function Footer() {
   const contactLinks = [
     {
       title: "WhatsApp",
-      icon: <MessageCircle className="h-full w-full text-rose-200" />,
-      href: "#",
+      icon: <i className="fi fi-brands-whatsapp text-[1em] leading-none text-rose-200" aria-hidden="true" />,
+      href: "https://wa.me/9842505037",
     },
     {
       title: "Instagram",
-      icon: <Camera className="h-full w-full text-rose-200" />,
-      href: "#",
+      icon: <i className="fi fi-brands-instagram text-[1em] leading-none text-rose-200" aria-hidden="true" />,
+      href: "https://www.instagram.com/flarans_beauty_studio",
     },
     {
       title: "Facebook",
-      icon: <Users className="h-full w-full text-rose-200" />,
-      href: "#",
+      icon: <i className="fi fi-brands-facebook text-[1em] leading-none text-rose-200" aria-hidden="true" />,
+      href: "https://www.facebook.com/flaransbeautystudio/",
     },
     {
       title: "Call Us",
       icon: <Phone className="h-full w-full text-rose-200" />,
-      href: "tel:+910000000000",
+      href: "tel:+919842505037",
     },
     {
       title: "Email",
       icon: <Mail className="h-full w-full text-rose-200" />,
-      href: "mailto:hello@flaransbeautyparlour.com",
+      href: "mailto:hello@flaransbeautyparlour@gmail.com",
     },
   ];
 
@@ -64,20 +64,18 @@ export default function Footer() {
         <div>
           <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-white">Services</h3>
           <div className="mt-4 grid gap-3 text-xs text-white/60">
-            <Link to="/services?category=Bridal" className="hover:text-rose-200">Bridal Makeup</Link>
-            <Link to="/services?category=Hair%20Care" className="hover:text-rose-200">Hair Styling</Link>
-            <Link to="/services?category=Facials" className="hover:text-rose-200">Facials</Link>
-            <Link to="/services?category=Waxing" className="hover:text-rose-200">Waxing</Link>
-            <Link to="/services?category=Pedicure%20%26%20Manicure" className="hover:text-rose-200">Nail Care</Link>
+            <Link to="/services/men" className="hover:text-rose-200">Mens Services</Link>
+            <Link to="/services/women" className="hover:text-rose-200">Womens Services</Link>
+            <Link to="/services/kids" className="hover:text-rose-200">Kids Services</Link>
           </div>
         </div>
         
         <div>
           <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-white">Contact</h3>
           <div className="mt-4 grid gap-4 text-xs text-white/60">
-            <p className="flex gap-2"><MapPin className="shrink-0 text-rose-300" size={16} /> <span>Your salon address, Tamil Nadu</span></p>
-            <p className="flex gap-2"><Phone className="shrink-0 text-rose-300" size={16} /> <span>+91 00000 00000</span></p>
-            <p className="flex gap-2"><Mail className="shrink-0 text-rose-300" size={16} /> <span>hello@flaransbeautyparlour.com</span></p>
+            <p className="flex gap-2"><MapPin className="shrink-0 text-rose-300" size={16} /> <a href="https://www.google.com/maps/place//@10.0847901,78.7730896,17z/data=!3m1!4b1!4m3!3m2!1s0x3b0067d73e939a43:0x83f3fde24dc69a62!12e1?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer"> <span>Velu Complex , Near Daily market , kalanivasal Road, Karaikudi 630003, Tamil Nadu</span></a></p>
+            <p className="flex gap-2"><Phone className="shrink-0 text-rose-300" size={16} /> <span>+91 9842505037</span></p>
+            <p className="flex gap-2"><Mail className="shrink-0 text-rose-300" size={16} /> <span>flaransbeautyparlour@gmail.com</span></p>
           </div>
         </div>
       </div>

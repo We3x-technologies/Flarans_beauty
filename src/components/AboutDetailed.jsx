@@ -1,6 +1,8 @@
 import { Award, GraduationCap, Sparkles, ShieldCheck, Leaf, HeartHandshake } from 'lucide-react';
 import { motion } from 'motion/react';
-
+import sophiaImage from '../Asserts/sophia.png'; // Assuming you have a local image for Sobhia
+import academyImage1 from '../Asserts/about-image.avif'; // Assuming you have local images for the academy
+import academyImage2 from '../Asserts/about-image2.avif'; // Assuming you have local images for the academy
 export default function AboutDetailed() {
   const qualityPillars = [
     {
@@ -54,11 +56,11 @@ export default function AboutDetailed() {
 
             <div className="mt-10 flex gap-10 border-t border-[#E7BDE6] pt-8">
               <div>
-                <p className="font-display text-4xl font-bold text-[#791B70]">20+</p>
+                <p className="font-display text-4xl font-bold text-[#791B70]">15+</p>
                 <p className="mt-1 text-xs font-semibold uppercase tracking-[0.1em] text-[#351132]">Years Experience</p>
               </div>
               <div>
-                <p className="font-display text-4xl font-bold text-[#791B70]">15k+</p>
+                <p className="font-display text-4xl font-bold text-[#791B70]">1k+</p>
                 <p className="mt-1 text-xs font-semibold uppercase tracking-[0.1em] text-[#351132]">Happy Clients</p>
               </div>
             </div>
@@ -71,14 +73,14 @@ export default function AboutDetailed() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative mx-auto w-full max-w-md lg:max-w-none"
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl bg-[#E7BDE6]/20">
+            <div className="relative w-3/4 overflow-hidden rounded-3xl border-transparent">
               <img 
-                src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?auto=format&fit=crop&w=800&q=90" 
+                src={sophiaImage}
                 alt="Portrait of beautician" 
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-black/10" />
+              {/* <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-black/10" /> */}
             </div>
             {/* Signature Accent */}
             <div className="absolute -bottom-6 -right-6 rounded-2xl bg-white p-6 shadow-xl">
@@ -103,12 +105,12 @@ export default function AboutDetailed() {
             >
               <div className="grid grid-cols-2 gap-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=600&q=90" 
+                  src={academyImage1}
                   alt="Students learning makeup" 
                   className="aspect-[4/5] w-full rounded-2xl object-cover"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=90" 
+                  src={academyImage2} 
                   alt="Beauty training session" 
                   className="aspect-[4/5] w-full translate-y-8 rounded-2xl object-cover"
                 />

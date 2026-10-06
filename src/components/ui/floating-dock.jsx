@@ -1,5 +1,5 @@
 "use client";
-import { Menu } from "lucide-react";
+import { Menu, MessageCircle, Users } from "lucide-react";
 import { cn } from "../../lib/utils";
 import {
   AnimatePresence,
@@ -9,6 +9,24 @@ import {
   useTransform,
 } from "motion/react";
 import { useRef, useState } from "react";
+
+export const createSocialDockItems = ({ instagram, whatsapp, facebook }) => [
+  {
+    title: "Instagram",
+    href: instagram,
+    icon: <i className="fi fi-brands-instagram text-rose-200" aria-hidden="true" />,
+  },
+  {
+    title: "WhatsApp",
+    href: whatsapp,
+    icon: <MessageCircle className="h-full w-full text-rose-200" aria-hidden="true" />,
+  },
+  {
+    title: "Facebook",
+    href: facebook,
+    icon: <Users className="h-full w-full text-rose-200" aria-hidden="true" />,
+  },
+];
 
 export const FloatingDock = ({
   items,
@@ -60,7 +78,7 @@ const FloatingDockMobile = ({
                   key={item.title}
                   className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/5"
                 >
-                  <div className="h-4 w-4">{item.icon}</div>
+                  <div className="flex h-4 w-4 items-center justify-center text-base">{item.icon}</div>
                 </a>
               </motion.div>
             ))}
@@ -138,7 +156,7 @@ function IconContainer({
           )}
         </AnimatePresence>
         <motion.div
-          style={{ width: widthIcon, height: heightIcon }}
+          style={{ width: widthIcon, height: heightIcon, fontSize: widthIcon }}
           className="flex items-center justify-center"
         >
           {icon}

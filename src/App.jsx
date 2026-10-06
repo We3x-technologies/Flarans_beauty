@@ -11,7 +11,10 @@ import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import AboutDetailed from './components/AboutDetailed';
 import ServicesPreview from './components/ServicesPreview';
-
+import MenServices from './components/services/MenServices';
+import WomenServices from './components/services/WomenServices';
+import KidsServices from './components/services/kidsServices';
+import BlogSection from './components/blog';
 function ScrollToTop() {
   const { pathname, search } = useLocation();
 
@@ -53,7 +56,11 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<PageLayout><Services /></PageLayout>} />
+        <Route path="/services/men" element={<PageLayout><MenServices /></PageLayout>} />
+        <Route path="/services/women" element={<PageLayout><WomenServices /></PageLayout>} />
+        <Route path="/services/kids" element={<PageLayout><KidsServices /></PageLayout>} />
         <Route path="/about" element={<PageLayout><AboutDetailed /></PageLayout>} />
+        <Route path="/blogs" element={<PageLayout><BlogSection /></PageLayout>} />
         <Route path="/gallery" element={<PageLayout><Gallery /></PageLayout>} />
         <Route path="/contact" element={<PageLayout><CTA /></PageLayout>} />
       </Routes>

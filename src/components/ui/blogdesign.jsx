@@ -56,8 +56,7 @@ export default function BlogArticleLayout({
         <motion.article
           variants={fadeUp}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.08 }}
+          animate="visible"
           className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-10"
         >
           {children}

@@ -1,4 +1,5 @@
 import React from "react";
+import sophiaImage from "../Asserts/sophia.png";
 import BlogArticleLayout, {
   ArticleSection,
   ArticleParagraph,
@@ -26,9 +27,9 @@ export default function DivaNaturalsKaraikudiBlog() {
           title="Meet Sobhia Flarans - The Woman Behind Flarans Beauty Parlour"
         >
           <img 
-            src="src/asserts/about.png" 
+            src={sophiaImage}
             alt="Sobhia Flarans - Owner of Flarans Beauty Parlour" 
-            className="w-full max-h-[500px] object-cover rounded-[18px] my-8 shadow-sm border border-neutral-200"
+            className="mx-auto my-8 block h-auto max-h-[500px] w-full rounded-[18px] border border-neutral-200 object-contain shadow-sm"
           />
           <ArticleParagraph>
             Behind Flarans Beauty Parlour is <SeoLink to="/about">Sobhia Flarans</SeoLink>, an experienced beauty professional with around 20 years of experience in the beauty and salon industry[cite: 9]. Over the years, she has developed extensive expertise in hair care, skin care, <SeoLink to="/contact">bridal beauty</SeoLink>, grooming and a wide range of professional salon services[cite: 9].

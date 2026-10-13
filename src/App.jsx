@@ -4,7 +4,7 @@ import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import AboutPreview from './components/AboutPreview';
 import Gallery from './components/Gallery';
-import Testimonials from './components/Testimonials';
+// import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import { useEffect } from 'react';
@@ -43,7 +43,7 @@ function HomePage() {
       <WhyChooseUs />
       <AboutPreview />
       <Gallery />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CTA />
     </PageLayout>
   );
